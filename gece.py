@@ -1,7 +1,7 @@
 #################################
 # ASO Tagger Bot #
 #################################
-#  Sahib - @HuseynH 
+#  Sahib - @ismiyev95 
 # Reponu Öz Adına Çıxaran Peysərdi
 # Reponu Açığ Görüm Oğurlama Oğlum
 ##################################
@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, Kanal, Qrup
 
 logging.basicConfig(
     level=logging.INFO,
@@ -181,7 +181,7 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı @WerabliAnlae",
                     buttons=(
                       [
                        Button.url('🍷 Bizə Qoşul', f'https://t.me/{WerabliAnlar}')
@@ -290,7 +290,7 @@ async def etag(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tağ mesajı yazmadın @WerabliAnlae!__")
   else:
     return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
