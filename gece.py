@@ -86,7 +86,7 @@ async def handler(event):
 async def mentionall(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"Qowulun Bize {@WerabliAnlar}")
+    return await event.respond(f" {nogrup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -292,7 +292,7 @@ async def etag(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("__Tağ mesajı yazmadın @WerabliAnlar !__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın. WerabliAnlar!__")
     
   if mode == "text_on_cmd":
     await client.send_message(event.chat_id, "❄️ Emoji li  Tağ başladı\n⏱️ İnterval - 2 saniyə",
