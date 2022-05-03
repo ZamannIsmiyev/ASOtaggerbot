@@ -45,9 +45,9 @@ async def start(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('✨️ ASO RƏSMİ ', f'https://t.me/{group}')],
-                      [Button.url('🍷 ASO SÖHBƏT QRUPU ', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 SAHİBİM', f'https://t.me/{sahibi}')]
+                     [Button.url('✨️ ASO Resmi ', f'https://t.me/{group}')],
+                      [Button.url('🍷 ASO Sohbet Qrupu ', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahibi}')]
                     ),
                     link_preview=False)
 
@@ -65,9 +65,9 @@ async def handler(event):
                        Button.inline("✍ Əmrlər", data="komek")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('✨️ ASO RƏSMİ', f'https://t.me/{group}')],
-                      [Button.url('🍷 ASO SÖHBƏT QRUPU', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 SAHİBİM', f'https://t.me/{sahibi}')]
+                     [Button.url('✨️ ASO Resmi', f'https://t.me/{group}')],
+                      [Button.url('🍷 ASO Sohbet Qrupu', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahibi}')]
                     ),
                     link_preview=False)
 
