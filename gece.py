@@ -28,7 +28,7 @@ gece_tag = []
 
 
 #tektag
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def cancel(event):
   global gece_tag
   gece_tag.remove(event.chat_id)
@@ -47,7 +47,7 @@ async def start(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('✨️ ASO Resmi ', f'https://t.me/{group}')],
                       [Button.url('🍷 ASO Sohbet Qrupu ', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahibi}')]
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
@@ -67,7 +67,7 @@ async def handler(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('✨️ ASO Resmi', f'https://t.me/{group}')],
                       [Button.url('🍷 ASO Sohbet Qrupu', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahibi}')]
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
