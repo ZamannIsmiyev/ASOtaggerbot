@@ -47,8 +47,7 @@ async def start(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('✨️ ASO Resmi ', f'https://t.me/{group}')],
                       [Button.url('🍷 ASO Sohbet Qrupu ', f'https://t.me/{support}')],
-                       [ Düymə . url ( '👨🏻‍💻 Sahib' , f'https://t.me/ { sahibi } ' )]
-                    ),
+                       [ [Button.url('👨🏻‍💻 Sahibi', f'https://t.me/{sahibi}')]
                     link_preview=False)
 
 
@@ -67,8 +66,7 @@ async def handler(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('✨️ ASO Resmi', f'https://t.me/{group}')],
                       [Button.url('🍷 ASO Sohbet Qrupu', f'https://t.me/{support}')],
-                       [ Düymə . url ( '👨🏻‍💻 Sahib' , f'https://t.me/ { sahibi } ' )]
-                    ),
+                       [Button.url('👨🏻‍💻 Sahibi', f'https://t.me/{sahibi}')]
                     link_preview=False)
 
 # gece kusu
