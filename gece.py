@@ -290,7 +290,7 @@ async def etag(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın @WerabliAnlae!__")
+    return await event.respond("__Tağ mesajı yazmadın @WerabliAnlar !__")
   else:
     return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
