@@ -44,10 +44,10 @@ async def start(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{ASOTagger_bot}?startgroup=a')],
+                     [Button.url('📣 ASO Söhbət Qrupu', f'https://t.me/{WerabliAnlar}')],
+                      [Button.url('📣 ASO Rəsmi', f'https://t.me/{ASOresmi}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{ismiyev95}')]
                     ),
                     link_preview=False)
 
@@ -64,15 +64,15 @@ async def handler(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{ASOtagger_bot}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{WerabliAnlar}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{ASOresmi}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{ismiyev95}')]
                     ),
                     link_preview=False)
 
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="help"))
+@client.on(events.callbackquery.CallbackQuery(data="komek"))
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
@@ -82,7 +82,7 @@ async def handler(event):
                     link_preview=False)
 
 # 5 li etiketleme modulü
-@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/gel ?(.*)"))
 async def mentionall(event):
   global gece_tag
   if event.is_private:
@@ -103,7 +103,7 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tağ mesajı yazmadın @WerabliAnlar !__")
   else:
     return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
@@ -111,7 +111,7 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                      Button.url('📣 Support', f'https://t.me/{support}')
+                      Button.url('📣 Support', f'https://t.me/WerabliAnlar{}')
                       ]
                     )
                   ) 
@@ -122,10 +122,10 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"➢ [{usr.first_name}](tg://user?id={usr.id})\n "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Tağ Prosesi Dayandırıldı @ASOresmi",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -141,7 +141,7 @@ async def mentionall(event):
 #########################
 
 # admin etiketleme modülü
-@client.on(events.NewMessage(pattern="^/admintag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 async def mentionalladmin(event):
   global gece_tag
   if event.is_private:
@@ -170,7 +170,7 @@ async def mentionalladmin(event):
     await client.send_message(event.chat_id, "❄️ Admin tağ başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   ) 
@@ -181,10 +181,10 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı @WerabliAnlar",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -229,7 +229,7 @@ async def tektag(event):
     await client.send_message(event.chat_id, "❄️ Tek-tek tağ başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('😍 Bizə Qoşul', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   ) 
@@ -240,10 +240,10 @@ async def tektag(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Teker teker Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Tek tek Tağ Prosesi Dayandırıldı @WerabliAnlar",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -309,10 +309,10 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Emoji  li Tağ işlemi Dayandırıldı",
+        await event.respond("⛔ Emoji  li Tağ işlemi Dayandırıldı @WerabliAnlar",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -407,7 +407,7 @@ async def stag(event):
     await client.send_message(event.chat_id, "❄️ Söz ilə tağ başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   ) 
@@ -418,10 +418,10 @@ async def stag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Söz ileə tag Prosesi Dayandırıldı",
+        await event.respond("⛔ Söz ileə tag Prosesi Dayandırıldı @WerabliAnlar",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -499,7 +499,7 @@ async def ctag(event):
     await client.send_message(event.chat_id, "❄️ Söz ile etiketleme başladı\n⏱️ İnterval - 2 saniye",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   ) 
@@ -510,10 +510,10 @@ async def ctag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(ctag)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
+        await event.respond("⛔ Söz ile etiketleme işlemi durduruldu @WerabliAnlar",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -559,7 +559,7 @@ async def rtag(event):
     await client.send_message(event.chat_id, "❄️ Renk ile etiketleme başladı\n⏱️ İnterval - 2 saniye",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   ) 
@@ -573,7 +573,7 @@ async def rtag(event):
         await event.respond("⛔ Renk ile etiketleme işlemi durduruldu",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                       Button.url('📣 Support', f'https://t.me/{WerabliAnlar}')
                       ]
                     )
                   )
@@ -588,6 +588,6 @@ async def rtag(event):
 ###############################
 
 
-print(">> Bot çalışmaktadur merak etme 🚀 @mutsuz_panda bilgi alabilirsin <<")
+print(">> Bot Artıq İşləyir 🚀 @ismiyev95 məlumat ala bilirsən <<")
 client.run_until_disconnected()
 run_until_disconnected()
