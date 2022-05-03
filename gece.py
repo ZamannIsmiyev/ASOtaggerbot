@@ -64,7 +64,7 @@ async def handler(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{ASOtagger_bot}?startgroup=a')],
                      [Button.url('✨️ ASO RƏSMİ', f'https://t.me/{ASOresmi}')],
                       [Button.url('🍷 ASO SÖHBƏT QRUPU', f'https://t.me/{WerabliAnlar}')],
                        [Button.url('👨🏻‍💻 SAHİBİM', f'https://t.me/{ismiyev95}')]
