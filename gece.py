@@ -181,7 +181,7 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı @WerabliAnlae",
+        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı @WerabliAnlar",
                     buttons=(
                       [
                        Button.url('🍷 Bizə Qoşul', f'https://t.me/{WerabliAnlar}')
