@@ -40,8 +40,8 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"{ad} {startmesaj}", buttons=(
-                      [
+      hadisə gözləyir . cavabla ( f" { reklam }  { startmesaj } " , düymələr = (
+                      
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
